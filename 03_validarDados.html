@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: VALIDAR DADOS DO USUÁRIO
+    Faça um programa que leia e valide as seguintes informações:
+    Nome: maior que 3 caracteres;
+    Idade: entre 0 e 150;
+    Salário: maior que zero;
+    Sexo: 'f' ou 'm';
+    Estado Civil: 's', 'c', 'v', 'd';
+    */
+
+    //ENTRADA
+    let nome = prompt(`digite o nome`);
+    let idade = Number(prompt(`informe a idade`));
+    let salario = Number(prompt(`informe o salario`));
+    let sexo = prompt(`informe o sexo "f" ou "m"`).toLowerCase();
+    let estado = prompt(`informe o estado civil "s", "c", "v", "d"`);
+
+    //PROCESSAMENTO
+    
+    while (nome.length < 3) 
+    {
+        alert(`nome inválido`);
+        nome = prompt(`informe um nome`);
+    }
+    while (idade < 0 || idade > 150 ){
+        alert(`idade invalida`)
+        idade = prompt(`informe uma idade`);
+    }
+    while(salario < 0 ){
+        alert(`invalido`);
+        salario = Number( prompt (`informe um salario`));
+    }
+    while (sexo !== "f" && sexo !== "m"){
+        alert(`invalido`);
+        sexo = prompt(`informe o sexo`).toLowerCase();
+    }
+    while (estado != "s" || estado != "c" || estado != "v" || estado != "d" ) {
+        alert(`invalido`);
+        estado = prompt(`informe o estdo civil`);
+    }
+
+
+    //SAÍDA
+
+</script>

@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: PESQUISA DE IDADE
+    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
+
+    a) A média dos salários do grupo;
+    b) A maior e a menor idade do grupo;
+    c) A quantidade de mulheres na região;
+    d) A idade e o sexo da pessoa que possui o menor salário;
+
+    Finalize a entrada de dados ao ser digitada uma idade negativa.
+    */
+
+    //ENTRADA
+
+    let quantidadeSalarios = 0;
+    let somaSalarios = 0;
+    let maiorIdade = 0;
+    let menorIdade = 999999999;
+    let mulheres = 0;
+    let menorSalario = 999999999;
+    let idadeMenorSalario = 0;
+    let sexoMenorSalario = 0;
+
+
+    //PROCESSAMENTO
+
+    do { 
+
+    idade = Number(prompt(`informe uma idade`));
+    if (idade < 0){
+        break;
+    }
+   
+    else if (idade < menorIdade){
+        menorIdade = idade;
+    }
+    else if (idade > maiorIdade){
+        maiorIdade = idade;
+    }
+    sexo = prompt(`informe seu sexo "M" ou "F"`);
+    if (sexo === "F"){
+        mulheres++;
+    }
+    salario = Number(prompt(`informe seu salario`));
+    quantidadeSalarios++;
+    somaSalarios += salario;
+    if (salario < menorSalario){
+        menorSalario = salario;
+        idadeMenorSalario = idade;
+        sexoMenorSalario = sexo;
+    }
+
+    
+        
+    } while (idade > 0);
+
+    mediaSalario = somaSalarios / quantidadeSalarios;
+
+    document.write(`a) A media de salarios foi: ${mediaSalario} <br> b) A maior idade do grupo e ${maiorIdade}, e a menor idade do grupo e ${menorIdade} <br> c) A quantidade de mulheres na regiao e ${mulheres} <br> d) A idade e o sexo da pessoa com menor salario sao ${idadeMenorSalario} anos e ${sexoMenorSalario}`);
+
+
+    //SAÍDA
+
+</script>
