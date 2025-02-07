@@ -8,22 +8,17 @@
     */
 
     //ENTRADA
-
-    let caixa=[];
-
-    const numero= Number(prompt(`informe um numero`));
-
-    caixa.push(numero);
-    split.caixa();
-    
-   
-
-    alert(`${caixa.reverse()}`);
-
+    let numero = prompt("Digite um número:");
+    let numeroInvertido = "";
 
     //PROCESSAMENTO
-
+    let i = numero.length - 1;
+    while (i >= 0) {
+        numeroInvertido += numero[i];
+        i--;
+    }
 
     //SAÍDA
-
+    alert(`O número invertido é: ${numeroInvertido}`);
+</script>
 </script>
